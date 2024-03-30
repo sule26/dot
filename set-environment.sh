@@ -6,10 +6,10 @@ for DIR in ./*; do
         continue
     elif [[ "${DIR}" == "./.config" ]]; then
         for CONFIG_DIR in ${DIR}/*; do
-            ln -s ~/dot/${CONFIG_DIR} ~/${CONFIG_DIR#./}
+            ln -s ~/dot/${CONFIG_DIR#./} ~/${CONFIG_DIR#./}
         done
         continue
     fi
-    ln -s ~/dot/${DIR} ~/${DIR#./}
+    ln -s ~/dot/${DIR#./} ~/${DIR#./}
 done
 shopt -s dotglob
