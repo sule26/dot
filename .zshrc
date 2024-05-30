@@ -114,9 +114,27 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source $(dirname $(gem which colorls))/tab_complete.sh
 
 if [ -x "$(command -v colorls)" ]; then
     alias ls="colorls"
 fi
 
-export MAMBA_ROOT_PREFIX="/home/sule/micromamba"
+export MAMBA_ROOT_PREFIX="$HOME/micromamba"
+eval "$(~/.local/bin/micromamba shell hook -s posix)"
+
+export PATH="$PATH:/opt/nvim-linux64/bin:$HOME/.loca/bin"
+export GPG_TTY=$(tty) 
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE='/home/sule/.local/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/sule/micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<

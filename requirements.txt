@@ -1,0 +1,13 @@
+customtkinter
+Faker
+loguru
+matplotlib
+numpy
+pandas
+pillow
+psycopg2-binary
+sqlalchemy
+sqlalchemy-orm
+tensorflow
+tk
+types-Pillow
