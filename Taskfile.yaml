@@ -1,0 +1,10 @@
+version: "3"
+vars:
+  MICROMAMBA_ENV: base
+  MICROMAMBA_FILE: "{{.MICROMAMBA_ENV}}.env.yaml"
+tasks:
+  env:set:
+    sources:
+      - "{{.MICROMAMBA_FILE}}"
+      - requirements.txt
+    cmd: micromamba install -f '{{.MICROMAMBA_FILE}}' -y
