@@ -121,6 +121,7 @@ if [ -x "$(command -v colorls)" ]; then
 fi
 
 export PATH="$PATH:/opt/nvim-linux64/bin:$HOME/.local/bin"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export GPG_TTY=$(tty) 
 alias nuget="mono /usr/local/bin/nuget.exe"
 
@@ -130,3 +131,10 @@ export NVM_DIR="$HOME/.nvm"
 
 alias eks-gitlab="aws eks update-kubeconfig --region us-east-1 --name gitlab-runner-cluster"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+
+eval $(thefuck --alias)
+alias fzf='fzf --preview "bat"'

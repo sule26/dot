@@ -1,20 +1,25 @@
 [user]
-	name = João Pedro Alcântara
-	email = alcantara.joaop30@gmail.com
-	signingKey = 01a5e75e0f3decdf0907ad0e0cd49a8bf8612cf4
-[commit]
-	gpgSign = true
+name = João Pedro Alcântara
+email = alcantara.joaop30@gmail.com
+signingKey = 01a5e75e0f3decdf0907ad0e0cd49a8bf8612cf4
+
+# [commit]
+# gpgSign = true
 [init]
-	defaultBranch = main
+defaultBranch = main
 [tag]
-	forceSignAnnotated = true
-	gpgSign = true
-[push]
-	# gpgSign = true
+forceSignAnnotated = true
+gpgSign = true
+# [push]
+# 	gpgSign = true
 [safe]
-	directory = *
+directory = *
 [core]
-	autocrlf = false
-	editor = vim
+autocrlf = false
+editor = vim
+
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+insteadOf = https://github.com/
+
+[url "git@gitlab.com:"]
+insteadOf = https://gitlab.com/

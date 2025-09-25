@@ -1,0 +1,17 @@
+views:
+  v1/nodes:
+    columns:
+      - NAME
+      - STATUS
+      - TAINTS
+      - NODEPOOL:.metadata.labels.karpenter\.sh/nodepool
+      - ZONE:.metadata.labels.topology\.kubernetes\.io/zone
+      - INSTANCE:.metadata.labels.beta\.kubernetes\.io/instance-type
+      - ROLE|H
+      - VERSION|H
+      - PODS
+      - CPU
+      - MEM
+      # - "CPU%|H"
+      # - "MEM%|H"
+      # - AGE|R
