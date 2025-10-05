@@ -135,6 +135,5 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
-
-eval $(thefuck --alias)
 alias fzf='fzf --preview "bat"'
+export PATH="$HOME/.local/share/gem/ruby/3.3.0/bin:$PATH"

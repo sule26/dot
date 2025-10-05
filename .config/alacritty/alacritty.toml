@@ -29,7 +29,7 @@ foreground = "0xdfbf8e"
 shape = "Beam"
 
 [font]
-size = 8
+size = 10
 
 [font.bold]
 family = "MesloLGS NF"
@@ -79,7 +79,7 @@ multiplier = 3
 [selection]
 save_to_clipboard = false
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/zsh"
 
 [window]
@@ -96,3 +96,5 @@ lines = 30
 [window.padding]
 x = 10
 y = 10
+
+[terminal]
